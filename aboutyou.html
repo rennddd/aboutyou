@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sempurna</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .bg {
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(120deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+            animation: moveBg 30s ease-in-out infinite alternate, fadeIn 2s ease;
+            z-index: -1;
+        }
+        @keyframes moveBg {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-25%, -25%); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            padding: 30px 20px;
+        }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1.5s ease forwards;
+        }
+        .delay-1 { animation-delay: 0.5s; }
+        .delay-2 { animation-delay: 1s; }
+        .delay-3 { animation-delay: 1.5s; }
+        .delay-4 { animation-delay: 2s; }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 350px;
+            height: 80px;
+            border-radius: 12px;
+            border: none;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <!-- GAMBAR PERBAIKAN: pakai placeholder dulu biar pasti muncul -->
+        <img class="fade-up delay-1" 
+             src="https://via.placeholder.com/300x300/203a43/ffffff?text=About+You" 
+             alt="About You">
+        
+        <h1 class="fade-up delay-2">Sempurna</h1>
+        <p class="fade-up delay-3">
+            [2/1 18.56] brendaaAA: terus cerita lagi ya<br> 
+            [2/1 18.56] brendaaAA: klo ada apa apaa.<br><br>
+            tidak apa apa jalannya susah,<br> 
+            asalkan puncaknya kamu.
+        </p>
+        
+        <!-- SPOTIFY PLAYER PERBAIKAN -->
+        <iframe class="fade-up delay-4" 
+                src="https://open.spotify.com/embed/track/1fDFHXcykq4iw8Gg7s5hG9?utm_source=generator" 
+                width="100%" 
+                height="152" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+        </iframe>
+        
+        <footer class="fade-up delay-4">About You - The 1975</footer>
+    </div>
+</body>
+</html>
